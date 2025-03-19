@@ -1,68 +1,376 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #fff;
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: white;
 }
 
-/* Header and Navigation */
-header {
-    background-color: #1e1e1e;
-    padding: 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-start;
-}
-
-nav li {
-    margin-right: 20px;
-}
-
-nav a {
-    color: #a0a0a0;
-    text-decoration: none;
-}
-
-/* Sections */
-section {
-    padding: 20px;
-    margin: 20px 0;
-}
-
-h2 {
-    font-size: 24px;
-}
-
-/* Footer */
-footer {
-    background-color: #1e1e1e;
-    padding: 10px;
+/* شريط التنقل */
+nav {
+    background-color: rgba(20, 20, 20, 0.9);
+    padding: 15px;
     text-align: center;
 }
 
-button {
-    background-color: #6200ea;
-    color: white;
-    padding: 10px 20px;
-    border: none;
+nav a {
+    color: #0ff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f0f;
+    text-shadow: 0 0 10px #f0f;
+}
+
+/* تهيئة التخطيط العام */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* القائمة الجانبية */
+.sidebar {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+/* ضبط محتوى الصفحة */
+.main-content {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* الفصول */
+.chapter {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 10px auto;
+    width: 100%;
+    border-left: 5px solid #0ff;
+    transition: 0.3s;
+}
+
+.chapter:hover {
+    border-left: 5px solid #f0f;
+    box-shadow: 0 0 10px #f0f;
+}
+
+/* الأزرار */
+button, .btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid #0ff;
+    color: #0ff;
+    font-size: 16px;
+    text-transform: uppercase;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+button:hover, .btn:hover {
+    background-color: #0ff;
+    color: #000;
+    box-shadow: 0 0 15px #0ff;
+}
+
+/* تحسين الفوتر */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* تحسين التخطيط على الشاشات الصغيرة */
+@media (max-width: 767px) {
+    .sidebar {
+        order: -1; /* يجعل القائمة الجانبية تظهر أولاً */
+        width: 100%;
     }
-    to {
-        opacity: 1;
+    .main-content {
+        width: 95%;
     }
 }
 
-.fade-in {
-    animation: fadeIn 1s ease-in-out;
+/* زر ☰ (محدث) */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    z-index: 1000; /* تأكد من ظهوره فوق المحتوى */
+    transition: background 0.3s ease-in-out;
+}
+
+.menu-toggle:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* تنسيق القائمة الجانبية */
+.nav-links {
+    position: fixed;
+    left: -250px; /* تبدأ مخفية */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s ease-in-out;
+    z-index: 999; /* تأكد من ظهورها تحت زر القائمة */
+}
+
+/* عند فتح القائمة */
+.nav-links.nav-open {
+    left: 0;
+}
+
+/* تنسيق الروابط داخل القائمة الجانبية */
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links ul li {
+    margin: 15px 0;
+}
+
+.nav-links ul li a {
+    color: cyan;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.nav-links ul li a:hover {
+    color: #00ffff;
+}
+
+/* الروابط العامة */
+a {
+    color: #00ffff !important; /* أزرق نيون */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00b3b3 !important; /* لون أغمق عند التمرير */
+}
+
+/* أزرار التواصل الاجتماعي */
+.social-links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.social-btn {
+    display: inline-block;
+    margin: 8px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    border: 2px solid transparent;
+}
+
+.facebook {
+    color: #00f7ff; /* أزرق نيون */
+    border-color: #00f7ff;
+    box-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+}
+
+.instagram {
+    color: #ff00ff; /* بنفسجي نيون */
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+/* تأثير عند تمرير الماوس */
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px white;
+    transform: scale(1.1);
+}
+/* تأثير متحرك يضيء الأزرار */
+@keyframes neonGlow {
+    0% { box-shadow: 0 0 5px #fff; }
+    50% { box-shadow: 0 0 15px #fff, 0 0 25px #fff; }
+    100% { box-shadow: 0 0 5px #fff; }
+}
+
+.social-btn {
+    animation: neonGlow 1.5s infinite alternate;
+}
+
+.social-btn:hover {
+    opacity: 0.8;
+}
+
+/* تأثير الكتابة على العنوان */
+#typing-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00ffea; /* لون مستقبلي */
+    font-family: 'Courier New', monospace; /* خط شبيه بالشاشات الرقمية */
+    text-align: center;
+    margin-top: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #00ffea; /* محاكاة مؤشر الكتابة */
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* العنوان الرئيسي */
+#neon-title {
+    font-family: 'Orbitron', sans-serif; /* خط مستقبلي */
+    font-size: 2.5rem;
+    color: #0ff; /* لون نيون */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 3px #0ff, 0 0 6px #00f; /* تقليل التوهج */
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+/* تأثير وميض التوهج */
+@keyframes neonGlow {
+    0% {
+        text-shadow: 0 0 2px #0ff, 0 0 4px #00f;
+    }
+    100% {
+        text-shadow: 0 0 5px #0ff, 0 0 8px #00f;
+    }
+}
+
+/* صورة الروبوت */
+.robot-image {
+    display: block;
+    width: 100%; /* جعل الصورة تمتد بعرض الشاشة */
+    max-width: 600px; /* تحديد أقصى عرض لها على الشاشات الكبيرة */
+    height: auto; /* الحفاظ على تناسب الأبعاد */
+    margin: 0 auto; /* توسيط الصورة */
+    object-fit: cover;
+}
+
+/* تحسين الصورة على الهواتف */
+@media (max-width: 768px) {
+    .robot-image {
+        max-width: 90%; /* جعلها أصغر قليلًا على الهواتف */
+    }
+}
+
+/* تحسين التناسب مع الشاشات الكبيرة */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 80%;
+        margin: auto;
+    }
+}
+
+/* تحسين التناسب مع الشاشات المتوسطة (تابلت) */
+@media (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+    .robot-image {
+        width: 120px;
+    }
+}
+
+/* تحسين التناسب مع الشاشات الصغيرة (موبايل) */
+@media (max-width: 768px) {
+    .container {
+        max-width: 95%;
+    }
+    .robot-image {
+        width: 100px;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* تنسيق أزرار التنقل بين الفصول */
+.chapter-navigation {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* تنسيق الأزرار */
+.nav-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: none; /* إزالة الخلفية */
+    color: #00e1ff; /* لون الخط سماوي نيون */
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    min-width: 120px;
+    text-align: center;
+    border: 2px solid #00e1ff; /* تحديد سماوي نيون */
+    
+    /* إضافة تأثير توهج خفيف */
+    box-shadow: 0 0 5px rgba(0, 225, 255, 0.5);
+}
+
+/* تأثير عند تمرير الماوس */
+.nav-button:hover,
+.nav-button:focus {
+    background: #00e1ff;
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 225, 255, 0.8);
+}
+
+/* تأثير عند الضغط */
+.nav-button:active {
+    background: #0088aa;
+    transform: scale(0.98);
+}
+
+/* جعل زر "أضف تعليقًا" بنفس التنسيق */
+.main-button {
+    display: block;
+    width: 100%;
+    max-width: 260px;
 }
