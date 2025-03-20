@@ -1,7 +1,7 @@
 console.log("app.js loaded!");
 
+// تحميل الفصول بشكل ديناميكي
 document.addEventListener("DOMContentLoaded", function() {
-    // Load the chapters dynamically
     const chapters = [
         { title: "Chapter 1", link: "#chapter1" },
         { title: "Chapter 2", link: "#chapter2" },
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Handle login form
+    // التعامل مع نموذج تسجيل الدخول
     const loginForm = document.getElementById("login-form");
     if (loginForm) {
         loginForm.addEventListener("submit", function(event) {
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Load particles.js only if the element exists
+    // تحميل particles.js إذا كان العنصر موجودًا
     if (document.getElementById("particles-js")) {
         particlesJS("particles-js", { 
             particles: { 
