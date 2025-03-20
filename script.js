@@ -58,25 +58,5 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// دالة toggleMenu لفتح وإغلاق القائمة الجانبية
-function toggleMenu(event) {
-    event.stopPropagation(); // يمنع انتشار الحدث إلى العناصر الأخرى
-    console.log("تم النقر على زر القائمة");
-    let navLinks = document.querySelector(".nav-links");
-    if (navLinks) {
-        navLinks.classList.toggle("nav-open");
-        console.log("تم تبديل القائمة الجانبية");
-    } else {
-        console.error("العنصر .nav-links غير موجود!");
-    }
-}
 
-// إغلاق القائمة عند النقر خارجها
-document.addEventListener("click", function(event) {
-    let navLinks = document.querySelector(".nav-links");
-    let menuToggle = document.querySelector(".menu-toggle");
-    if (navLinks && !navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
-        navLinks.classList.remove("nav-open");
-        console.log("تم إغلاق القائمة الجانبية");
-    }
 });
