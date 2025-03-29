@@ -329,7 +329,7 @@ button:hover {
 
 
 
-/* تنسيق زر القائمة */
+/* زر القائمة */
 .menu-toggle {
     font-size: 24px;
     background: none;
@@ -384,8 +384,14 @@ button:hover {
     text-decoration: none;
     color: white;
     font-size: 18px;
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     transition: 0.3s;
+}
+
+#sidebar ul li a i {
+    font-size: 20px;
 }
 
 #sidebar ul li a:hover {
