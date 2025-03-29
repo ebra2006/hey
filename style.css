@@ -334,3 +334,36 @@ button:hover {
 body {
     margin-top: 60px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* لضبط الـ hero في المنتصف تمامًا */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* بدلًا من height: 100vh; */
+}
+
+/* تأكد من أن الحاويات الكبيرة في المنتصف */
+.booking, .reviews, .map, .form-container {
+    margin-left: auto;
+    margin-right: auto;
+}
