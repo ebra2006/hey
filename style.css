@@ -330,29 +330,31 @@ button:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    justify-content: space-between; /* يجعل العناصر في الطرفين */
+    justify-content: center; /* توسيط العنوان */
     padding: 10px 20px;
     z-index: 1000;
+    height: 50px; /* تحديد ارتفاع مناسب */
+    position: relative; /* تأكد أن زر القائمة لا يتداخل */
 }
 
-/* زر القائمة في أقصى اليسار */
 .menu-toggle {
+    position: absolute;
+    left: 10px; /* تثبيت الزر على اليسار */
+    top: 50%;
+    transform: translateY(-50%); /* جعله في منتصف الـ header عموديًا */
     font-size: 24px;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 5px;
-    margin-left: 0; /* ضمان أنه على اليسار تمامًا */
+    padding: 5px; /* تقليل مساحة الضغط */
+    width: auto;
+    height: auto;
 }
 
-/* العنوان في المنتصف */
 .site-title {
     font-size: 20px;
     font-weight: bold;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap; /* لضمان عدم كسر النص */
+    margin: 0;
 }
 
 
