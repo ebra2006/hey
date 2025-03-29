@@ -77,15 +77,6 @@ footer {
     to { opacity: 1; }
 }
 
-
-
-
-
-
-
-
-
-
 .section-background {
     background: linear-gradient(to bottom, #f8f9fa, #ffffff); /* تدرج ناعم للألوان */
     color: #333;
@@ -136,18 +127,6 @@ footer {
     height: 100vh;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* ضبط الحاوية لتكون في منتصف الصفحة */
 .form-container {
     width: 50%; /* ضبط عرض مناسب */
@@ -195,17 +174,6 @@ button:hover {
     background-color: #0056b3;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .navbar {
     display: flex;
     flex-wrap: wrap;
@@ -227,69 +195,11 @@ button:hover {
     color: #ffeb3b;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.map-section {
-    text-align: center;
-    margin: 40px auto;
-    width: 90%;
-    max-width: 800px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-.map-section h2 {
-    font-size: 24px;
-    color: #007bff;
-    margin-bottom: 10px;
-}
-.map-section p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-
-
-
-
-
-
-
-
 .container {
     width: 90%;
     max-width: 600px;
     margin: auto;
 }
-
-.map-section iframe {
-    width: 100%;
-    height: 300px;
-}
-
-
-
-
-
 
 
 @media (max-width: 768px) {
@@ -306,23 +216,8 @@ button:hover {
         width: 95%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #navbar {
-    position: fixed; /* جعل البار ثابتًا */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -334,6 +229,7 @@ button:hover {
     padding: 10px 20px;
     z-index: 1000;
     height: 50px; /* تحديد ارتفاع مناسب */
+    position: fixed; /* تأكد أن زر القائمة لا يتداخل */
 }
 
 .menu-toggle {
@@ -345,7 +241,7 @@ button:hover {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 5px;
+    padding: 5px; /* تقليل مساحة الضغط */
     width: auto;
     height: auto;
 }
@@ -355,29 +251,6 @@ button:hover {
     font-weight: bold;
     margin: 0;
 }
-
-/* تأكد من وجود هامش علوي للمحتوى حتى لا يختفي تحت الشريط */
-body {
-    padding-top: 60px; /* لتجنب تداخل المحتوى مع البار الثابت */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* القائمة الجانبية */
 #sidebar {
@@ -461,27 +334,3 @@ body {
 body {
     margin-top: 60px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
