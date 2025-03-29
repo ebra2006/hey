@@ -148,40 +148,42 @@ footer {
 
 
 
-/* تحسين الشكل العام لحقول الإدخال */
+/* ضبط الحاوية لتكون في منتصف الصفحة */
+.form-container {
+    width: 50%; /* ضبط عرض مناسب */
+    margin: 50px auto; /* توسيط الحاوية */
+    padding: 20px;
+    background: #fff; /* لون خلفية أبيض */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    border-radius: 12px; /* زوايا دائرية */
+    text-align: center; /* توسيط النصوص داخل الحاوية */
+}
+
+/* تنسيق الحقول */
 input, select {
-    width: 100%;  /* جعل الحقول بعرض مناسب */
-    padding: 10px;
-    margin: 5px 0;
-    border: 2px solid #007BFF; /* لون إطار أزرق أنيق */
-    border-radius: 8px; /* زوايا دائرية */
+    width: 90%; /* ضبط العرض */
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
     font-size: 16px;
-    background-color: #f8f9fa; /* لون خلفية فاتح */
-    transition: all 0.3s ease-in-out; /* تأثير عند التفاعل */
+    background-color: #f8f9fa;
+    transition: all 0.3s ease-in-out;
 }
 
-/* تحسين عند تمرير الماوس فوق الحقل */
+/* تأثير عند تحديد الحقل */
 input:focus, select:focus {
-    border-color: #0056b3; /* لون أزرق غامق عند التحديد */
-    box-shadow: 0 0 8px rgba(0, 91, 187, 0.3); /* تأثير ظل خفيف */
-    outline: none; /* إزالة الإطار الافتراضي */
+    border-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 91, 187, 0.3);
+    outline: none;
 }
 
-/* ضبط حقل تحديد عدد المسافرين */
-select {
-    cursor: pointer;
-    appearance: none; /* إزالة المظهر الافتراضي */
-    background-image: url('https://cdn-icons-png.flaticon.com/512/60/60995.png'); /* أيقونة سهم لأسفل */
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 15px;
-}
-
-/* تحسين زر الإرسال */
+/* تحسين مظهر زر الإرسال */
 button {
+    width: 94%;
     background-color: #007BFF;
     color: white;
-    padding: 10px 15px;
+    padding: 12px;
     border: none;
     border-radius: 8px;
     font-size: 16px;
