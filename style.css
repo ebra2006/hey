@@ -343,37 +343,31 @@ button:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    justify-content: center; /* يجعل العنوان في المنتصف */
+    justify-content: center; /* توسيط جميع العناصر */
     padding: 10px 20px;
     z-index: 1000;
-    height: 50px;
-    position: relative;
 }
 
-/* زر القائمة */
+/* زر القائمة والعنوان في مجموعة واحدة */
+.navbar-content {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* مسافة بين الزر والعنوان */
+}
+
+
+
+
+
+/* زر القائمة في أقصى اليسار */
 .menu-toggle {
     font-size: 24px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 5px;
-    position: absolute;
-    left: 10px; /* تثبيت الزر في أقصى اليسار */
-    top: 50%;
-    transform: translateY(-50%);
+    margin-left: 0; /* ضمان أنه على اليسار تمامًا */
 }
-
-
-
-/* العنوان يكون في المنتصف */
-.site-title {
-    font-size: 20px;
-    font-weight: bold;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 
 
 
