@@ -206,10 +206,6 @@ button:hover {
 
 
 
-
-
-
-
 .navbar {
     display: flex;
     justify-content: center;
@@ -230,4 +226,44 @@ button:hover {
 }
 .nav-item:hover {
     color: #ffeb3b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.map-section {
+    text-align: center;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 800px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.map-section h2 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+.map-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
 }
