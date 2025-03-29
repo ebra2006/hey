@@ -490,14 +490,3 @@ body {
 
 
 
-#searchBox {
-    width: 300px;
-    padding: 10px;
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
