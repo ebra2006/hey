@@ -87,28 +87,41 @@ footer {
 
 
 .section-background {
-    background: linear-gradient(to bottom, #e0e0e0, #ffffff); /* تدرج ألوان لخلق تأثير ناعم */
-    color: #333; /* لون النص لجعله واضحًا */
-    padding: 40px;
+    background: linear-gradient(to bottom, #f8f9fa, #ffffff); /* تدرج ناعم للألوان */
+    color: #333;
+    padding: 60px 20px; /* توسيع المساحة الداخلية */
     text-align: center;
-    border-radius: 10px; /* حواف ناعمة */
+    border-radius: 15px; /* حواف ناعمة */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+    max-width: 80%;
+    margin: 40px auto; /* توسيط القسم في الصفحة */
 }
 
-/* تحسين وضوح النص داخل القسم */
-.section-background h2, 
-.section-background p {
-    color: #222; /* لون أغمق للنص */
+/* تحسين وضوح النص */
+.section-background h2 {
+    color: #222;
+    font-size: 28px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
-/* تحسين زر "ابدأ الآن" */
+.section-background p {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* تصميم الزر */
 .section-background .btn {
-    background-color: #007bff; /* أزرق متناسق مع هيدر الموقع */
+    display: inline-block;
+    background-color: #007bff; /* لون أزرق متناسق مع الهيدر */
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 18px;
     text-decoration: none;
     font-weight: bold;
+    transition: background 0.3s ease;
 }
 
 .section-background .btn:hover {
