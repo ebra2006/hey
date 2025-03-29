@@ -341,7 +341,6 @@ button:hover {
 
 
 
-/* تثبيت شريط التنقل في أعلى الصفحة */
 #navbar {
     position: fixed;
     top: 0;
@@ -351,27 +350,31 @@ button:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* توسيط جميع العناصر */
     padding: 10px 20px;
     z-index: 1000;
 }
 
-/* تنسيق زر القائمة */
+/* زر القائمة والعنوان في مجموعة واحدة */
+.navbar-content {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* مسافة بين الزر والعنوان */
+}
+
+/* زر القائمة */
 .menu-toggle {
     font-size: 24px;
     background: none;
     border: none;
     cursor: pointer;
-    margin-right: 10px;
 }
 
-/* تنسيق عنوان الموقع */
+/* عنوان الموقع */
 .site-title {
     font-size: 20px;
     font-weight: bold;
-    margin: 0;
 }
-
 
 
 
