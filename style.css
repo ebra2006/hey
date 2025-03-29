@@ -366,14 +366,14 @@ button:hover {
 
 
 
-/* زر القائمة في أقصى اليسار بمساحة ضغط صغيرة */
+/* زر القائمة في أقصى اليسار */
 .menu-toggle {
     font-size: 24px;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 5px;  /* تصغير مساحة الضغط */
-    margin-left: 5px;
+    padding: 5px;
+    margin-left: 0; /* ضمان أنه على اليسار تمامًا */
 }
 
 
