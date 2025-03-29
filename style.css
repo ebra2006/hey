@@ -322,7 +322,7 @@ button:hover {
 
 
 #navbar {
-    position: fixed;
+    position: fixed; /* جعل البار ثابتًا */
     top: 0;
     left: 0;
     width: 100%;
@@ -334,7 +334,6 @@ button:hover {
     padding: 10px 20px;
     z-index: 1000;
     height: 50px; /* تحديد ارتفاع مناسب */
-    position: relative; /* تأكد أن زر القائمة لا يتداخل */
 }
 
 .menu-toggle {
@@ -346,7 +345,7 @@ button:hover {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 5px; /* تقليل مساحة الضغط */
+    padding: 5px;
     width: auto;
     height: auto;
 }
@@ -355,6 +354,11 @@ button:hover {
     font-size: 20px;
     font-weight: bold;
     margin: 0;
+}
+
+/* تأكد من وجود هامش علوي للمحتوى حتى لا يختفي تحت الشريط */
+body {
+    padding-top: 60px; /* لتجنب تداخل المحتوى مع البار الثابت */
 }
 
 
