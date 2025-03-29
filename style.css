@@ -329,16 +329,37 @@ button:hover {
 
 
 
-/* زر القائمة */
+/* جعل الـ Navbar ثابت في الأعلى */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1003;
+}
+
+/* عنوان الموقع */
+.site-title {
+    flex: 1;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+/* زر القائمة الجانبية داخل الـ Navbar */
 .menu-toggle {
     font-size: 24px;
     background: none;
     border: none;
+    color: white;
     cursor: pointer;
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    z-index: 1001;
+    margin-right: 15px;
 }
 
 /* القائمة الجانبية */
@@ -417,4 +438,9 @@ button:hover {
 
 #overlay.active {
     display: block;
+}
+
+/* إضافة هامش علوي حتى لا يغطي الـ Navbar المحتوى */
+body {
+    margin-top: 60px;
 }
