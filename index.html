@@ -1,77 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veron Novel</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Roamio - اكتشف العالم</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="particles-js"></div>
-
     <header>
-        <nav id="navbar">
-            <div class="logo">
-                <h1 id="neon-title">Veron (Conflict Of Minds)</h1>
-            </div>
+        <h1>Roamio - اكتشف العالم</h1>
+        <nav>
+            <a href="#home">الرئيسية</a>
+            <a href="#booking">حجز الرحلات</a>
+            <a href="#reviews">المراجعات</a>
+            <a href="#map">الخريطة</a>
+            <a href="login.html">تسجيل الدخول</a>
         </nav>
     </header>
-
-    <main>
-        <section id="home">
-            <h1>Welcome to My Book</h1>
-            <img src="pngtree-adorable-ai-robot-offering-a-friendly-gesture-3d-render-image_13516068.png" alt="AI Robot" class="robot-image">
-            <p>Explore the world of my story, written just for you.</p>
-        </section>
-
-        <section id="chapters">
-            <h2>Chapters</h2>
-            <div id="chapter-list">
-                <!-- Chapters will be dynamically listed here -->
-            </div>
-        </section>
-
-        <section id="wattpad-links">
-            <h2>اقرأ الرواية على واتباد</h2>
-            <p>ممكن تقرا الرواية على واتباد لو مش عندك ممكن تقرأها في الموقع هنا وكمان عاملك لينكات خارجية لو حابب تحمل الرواية وتقراها في اي وقت لو قابلك اي مشكلة تقدر تتواصل معايا سايبلك طرق للتواصل في اخر الموقع</p>
-            <p><a href="https://www.wattpad.com/story/390434439?utm_source=android&utm_medium=link&utm_content=share_reading&wp_page=reading&wp_uname=ebra_1" target="_blank">🔗 اقرأ الرواية على واتباد</a></p>
-
-            <h2>لقراءة الفصول داخل الموقع:</h2>
-            <ul>
-                <li><a href="chapters/chapter1.html" target="_blank">"الفصل الأول_"التحول الكبير والفرصة الذهبية</a></li>
-                <li><a href="chapters/chapter2.html" target="_blank">"الفصل الثاني_"ولادة جديدة</a></li>
-                <li><a href="chapters/chapter3.html" target="_blank">"الفصل الثالث_"فيرون... الاختراق والمواجهة</a></li>
-                <li><a href="chapters/chapter4.html" target="_blank">"الفصل الرابع_"الصرخة الأخيرة... التي لم يسمعها أحد</a></li>
-                <li><a href="chapters/chapter5.html" target="_blank">"الفصل الخامس_"الطريق الى المجهول</a></li>
-            </ul>
-
-            <h3>لتحميل فصول الرواية pdf</h3>
-            <ul>
-                <li><a href="https://drive.google.com/file/d/1APQyHhIPlWzwWrpqSLM-6t8Gk3HCaGw9/view?usp=drivesdk" target="_blank">📖 الفصل الأول</a></li>
-                <li><a href="https://acrobat.adobe.com/id/urn:aaid:sc:EU:3990ddcd-f38f-4853-8a9b-6f4ec8550909" target="_blank">📖 الفصل الثاني</a></li>
-                <li><a href="https://drive.google.com/file/d/1DePxaWMGSQxXxGos4FQj2n5L2zSOdCl9/view?usp=drivesdk" target="_blank">📖 الفصل الثالث</a></li>
-                <li><a href="https://drive.google.com/file/d/1EsGMZei4sjieJZtSb0rLSlU_AQAjy_tt/view?usp=drivesdk" target="_blank">📖 الفصل الرابع</a></li>
-            </ul>
-        </section>
-
-        <section id="about">
-            <h2>About the Author</h2>
-            <p>أنا <strong>إبراهيم محمد</strong> شاب عندي 19 سنة بكتب روايات وبحب الخيال العلمي جدا فألفت الرواية دي أتمنى تعجبكم.</p>
-            <p>لو كنت من عشاق روايات الخيال العلمي، أو عندك أي ملاحظات أو أفكار تحب تشوفها في الرواية اثناء كتابتها، يهمني جدًا أسمع رأيك! تقدر تتواصل معايا من خلال اللينكات دي:</p>
-            <div class="social-links">
-                <a href="https://www.facebook.com/share/1DmTA6tMav/" target="_blank" class="social-btn facebook">Facebook</a>
-                <a href="https://www.instagram.com/ibrahim_mohamed105?igsh=cnZ0ZXk0ZHB5YWdw" target="_blank" class="social-btn instagram">Instagram</a>
-            </div>
-        </section>
-    </main>
-
+    
+    <section id="home" class="hero">
+        <h2>استكشف وجهات جديدة كل يوم</h2>
+        <p>خطط لمغامرتك القادمة بسهولة وسلاسة</p>
+        <a href="#booking" class="btn">ابدأ الآن</a>
+    </section>
+    
+    <section id="booking" class="booking">
+        <h2>احجز رحلتك</h2>
+        <form>
+            <label for="destination">اختر وجهتك:</label>
+            <input type="text" id="destination" placeholder="مثال: باريس، دبي...">
+            
+            <label for="date">التاريخ:</label>
+            <input type="date" id="date">
+            
+            <label for="passengers">عدد المسافرين:</label>
+            <input type="number" id="passengers" min="1" value="1">
+            
+            <button type="submit" class="btn">احجز الآن</button>
+        </form>
+    </section>
+    
+    <section id="reviews" class="reviews">
+        <h2>ماذا يقول المسافرون؟</h2>
+        <div class="review">
+            <p>"تجربة رائعة! سهولة في الحجز ووجهات مذهلة!"</p>
+            <span>⭐⭐⭐⭐⭐</span>
+        </div>
+        <div class="review">
+            <p>"موقع ممتاز لتنظيم الرحلات، سأعود لاستخدامه مجددًا!"</p>
+            <span>⭐⭐⭐⭐</span>
+        </div>
+    </section>
+    
+    <section id="map" class="map">
+        <h2>استكشف وجهاتك على الخريطة</h2>
+        <div id="google-map"></div>
+    </section>
+    
     <footer>
-        <p>© 2025 my Book. All rights reserved.</p>
+        &copy; 2025 Roamio - جميع الحقوق محفوظة
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
