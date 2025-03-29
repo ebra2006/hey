@@ -321,19 +321,6 @@ button:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 #navbar {
     position: fixed;
     top: 0;
@@ -343,21 +330,10 @@ button:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    justify-content: center; /* توسيط جميع العناصر */
+    justify-content: space-between; /* يجعل العناصر في الطرفين */
     padding: 10px 20px;
     z-index: 1000;
 }
-
-/* زر القائمة والعنوان في مجموعة واحدة */
-.navbar-content {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* مسافة بين الزر والعنوان */
-}
-
-
-
-
 
 /* زر القائمة في أقصى اليسار */
 .menu-toggle {
@@ -368,6 +344,27 @@ button:hover {
     padding: 5px;
     margin-left: 0; /* ضمان أنه على اليسار تمامًا */
 }
+
+/* العنوان في المنتصف */
+.site-title {
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap; /* لضمان عدم كسر النص */
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
