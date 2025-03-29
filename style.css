@@ -1,219 +1,95 @@
-body {
-    font-family: 'Cairo', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-    color: #333;
-}
-
-header {
-    background: linear-gradient(90deg, #007bff, #00d4ff);
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.hero {
-    text-align: center;
-    padding: 50px;
-    background: url('hero-bg.jpg') center/cover no-repeat;
-    color: white;
-    animation: fadeIn 2s;
-}
-
-.btn {
-    background: #00aaff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #0088cc;
-}
-
-.booking, .reviews, .map {
-    text-align: center;
-    padding: 50px;
-    background: white;
-    margin: 20px auto;
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.review {
-    background: #f8f8f8;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #007bff;
-    color: white;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
 
 
 
-
-
-
-
-
-
-
-.section-background {
-    background: linear-gradient(to bottom, #f8f9fa, #ffffff); /* تدرج ناعم للألوان */
-    color: #333;
-    padding: 60px 20px; /* توسيع المساحة الداخلية */
-    text-align: center;
-    border-radius: 15px; /* حواف ناعمة */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
-    max-width: 80%;
-    margin: 40px auto; /* توسيط القسم في الصفحة */
-}
-
-/* تحسين وضوح النص */
-.section-background h2 {
-    color: #222;
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.section-background p {
-    color: #555;
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-/* تصميم الزر */
-.section-background .btn {
-    display: inline-block;
-    background-color: #007bff; /* لون أزرق متناسق مع الهيدر */
-    color: #fff;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-.section-background .btn:hover {
-    background-color: #0056b3; /* لون داكن عند التمرير */
-}
-/* ضبط النص في المنتصف */
-.hero-content {
+/* تحسين تصميم الفريمات ليكون أنظف ومتناسقًا */
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #007bff, #ffffff);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* ضبط الحاوية لتكون في منتصف الصفحة */
-.form-container {
-    width: 50%; /* ضبط عرض مناسب */
-    margin: 50px auto; /* توسيط الحاوية */
+/* تصميم قسم الحجز */
+.booking-section {
+    background: #fff;
     padding: 20px;
-    background: #fff; /* لون خلفية أبيض */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف */
-    border-radius: 12px; /* زوايا دائرية */
-    text-align: center; /* توسيط النصوص داخل الحاوية */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
 }
 
-/* تنسيق الحقول */
-input, select {
-    width: 90%; /* ضبط العرض */
-    padding: 12px;
+/* تنسيق الحقول المدخلة والقوائم المنسدلة */
+.booking-section input,
+.booking-section select {
+    width: calc(100% - 20px);
+    padding: 10px;
     margin: 10px 0;
-    border: 2px solid #007BFF;
-    border-radius: 8px;
-    font-size: 16px;
-    background-color: #f8f9fa;
-    transition: all 0.3s ease-in-out;
-}
-
-/* تأثير عند تحديد الحقل */
-input:focus, select:focus {
-    border-color: #0056b3;
-    box-shadow: 0 0 10px rgba(0, 91, 187, 0.3);
+    border: 2px solid #007bff;
+    border-radius: 10px;
     outline: none;
-}
-
-/* تحسين مظهر زر الإرسال */
-button {
-    width: 94%;
-    background-color: #007BFF;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
     font-size: 16px;
+}
+
+/* تصميم زر الحجز */
+.booking-section button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+/* تأثير التحويم على زر الحجز */
+.booking-section button:hover {
+    background: #0056b3;
 }
 
+/* تحسين تصميم جزء "استكشف وجهات جديدة" */
+.explore-section {
+    background: #00d084;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 600px;
+}
 
+/* تنسيق العنوان في قسم الاستكشاف */
+.explore-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
 
+/* تنسيق النصوص في قسم الاستكشاف */
+.explore-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
 
+/* تصميم زر الاستكشاف */
+.explore-section button {
+    background: white;
+    color: #00d084;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
 
-
-
-
-
-
-
-
-
-/* تحسين تصميم الفريمات ليكون أنظف ومتناسقًا */ .container { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; background: linear-gradient(to bottom, #007bff, #ffffff); }
-.booking-section { background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); width: 90%; max-width: 600px; text-align: center; }
-.booking-section input, .booking-section select { width: calc(100% - 20px); padding: 10px; margin: 10px 0; border: 2px solid #007bff; border-radius: 10px; outline: none; font-size: 16px; }
-.booking-section button { width: 100%; padding: 12px; background: #007bff; color: white; font-size: 18px; border: none; border-radius: 10px; cursor: pointer; transition: background 0.3s ease; }
-.booking-section button:hover { background: #0056b3; }
-/* تحسين تصميم جزء "استكشف وجهات جديدة" */ .explore-section { background: #00d084; color: white; padding: 40px 20px; text-align: center; border-radius: 20px; margin: 30px auto; width: 90%; max-width: 600px; }
-.explore-section h2 { font-size: 24px; font-weight: bold; margin-bottom: 10px; }
-.explore-section p { font-size: 18px; margin-bottom: 20px; }
-.explore-section button { background: white; color: #00d084; padding: 10px 20px; font-size: 18px; border: none; border-radius: 10px; cursor: pointer; transition: background 0.3s ease; }
-.explore-section button:hover { background: #e0e0e0; }
+/* تأثير التحويم على زر الاستكشاف */
+.explore-section button:hover {
+    background: #e0e0e0;
+}
