@@ -24,3 +24,17 @@ document.addEventListener("DOMContentLoaded", function () {
     
     window.initMap = initMap;
 });
+
+
+
+
+
+
+
+
+
+
+function toggleMenu() {
+    document.getElementById("sidebar").classList.toggle("active");
+    document.getElementById("overlay").classList.toggle("active");
+}
