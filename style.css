@@ -329,28 +329,54 @@ button:hover {
 
 
 
-/* جعل الـ Navbar ثابت في الأعلى */
-#navbar {
-    position: fixed;
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar {
+    position: fixed; /* تثبيت الشريط في الأعلى */
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
-    background: linear-gradient(to right, #007bff, #00c6ff);
-    color: white;
+    background: white;
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1003;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* ضمان ظهوره فوق أي عناصر أخرى */
 }
 
-/* عنوان الموقع */
-.site-title {
-    flex: 1;
-    font-size: 22px;
-    margin-left: 10px;
+.menu-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 15px;
 }
+
+.site-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* زر القائمة الجانبية داخل الـ Navbar */
 .menu-toggle {
