@@ -27,14 +27,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
-
-
-
-
-
 function toggleMenu() {
     document.getElementById("sidebar").classList.toggle("active");
     document.getElementById("overlay").classList.toggle("active");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function initMap() {
+    var location = { lat: -37.8172, lng: 144.9559 };
+    var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: location,
+    });
+
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map,
+    });
+
+    // مربع البحث
+    var input = document.getElementById("searchBox");
+    var searchBox = new google.maps.places.SearchBox(input);
+
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+    searchBox.addListener("places_changed", function () {
+        var places = searchBox.getPlaces();
+        if (places.length === 0) return;
+
+        var bounds = new google.maps.LatLngBounds();
+        places.forEach((place) => {
+            if (!place.geometry) return;
+            bounds.extend(place.geometry.location);
+        });
+        map.fitBounds(bounds);
+    });
 }
