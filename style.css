@@ -341,52 +341,45 @@ button:hover {
 
 
 
-.navbar {
-    position: fixed; /* تثبيت الشريط في الأعلى */
+/* تثبيت شريط التنقل في أعلى الصفحة */
+#navbar {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: white;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* ضمان ظهوره فوق أي عناصر أخرى */
+    z-index: 1000;
 }
 
-.menu-button {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    margin-right: 15px;
-}
-
-.site-title {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* زر القائمة الجانبية داخل الـ Navbar */
+/* تنسيق زر القائمة */
 .menu-toggle {
     font-size: 24px;
     background: none;
     border: none;
-    color: white;
     cursor: pointer;
-    margin-right: 15px;
+    margin-right: 10px;
 }
+
+/* تنسيق عنوان الموقع */
+.site-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
 
 /* القائمة الجانبية */
 #sidebar {
