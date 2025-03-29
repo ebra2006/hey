@@ -86,29 +86,31 @@ footer {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    // نموذج الحجز - تنبيه عند الإرسال
-    document.querySelector(".booking form").addEventListener("submit", function (event) {
-        event.preventDefault();
-        alert("تم إرسال طلب الحجز بنجاح!");
-    });
+.section-background {
+    background: linear-gradient(to bottom, #e0e0e0, #ffffff); /* تدرج ألوان لخلق تأثير ناعم */
+    color: #333; /* لون النص لجعله واضحًا */
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px; /* حواف ناعمة */
+}
 
-    // تحريك الصفحة عند الضغط على الروابط
-    document.querySelectorAll("nav a").forEach(anchor => {
-        anchor.addEventListener("click", function (event) {
-            event.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
-        });
-    });
+/* تحسين وضوح النص داخل القسم */
+.section-background h2, 
+.section-background p {
+    color: #222; /* لون أغمق للنص */
+    font-weight: bold;
+}
 
-    // خريطة جوجل
-    function initMap() {
-        var map = new google.maps.Map(document.getElementById("google-map"), {
-            center: { lat: 25.276987, lng: 55.296249 }, // دبي كموقع افتراضي
-            zoom: 5
-        });
-    }
-    
-    window.initMap = initMap;
-});
+/* تحسين زر "ابدأ الآن" */
+.section-background .btn {
+    background-color: #007bff; /* أزرق متناسق مع هيدر الموقع */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section-background .btn:hover {
+    background-color: #0056b3; /* لون داكن عند التمرير */
+}
