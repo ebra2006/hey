@@ -370,12 +370,15 @@ button:hover {
     cursor: pointer;
 }
 
-/* عنوان الموقع */
+
+/* العنوان يكون في المنتصف */
 .site-title {
     font-size: 20px;
     font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
-
 
 
 
